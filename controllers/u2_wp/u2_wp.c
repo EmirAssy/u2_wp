@@ -5,6 +5,7 @@
 
 #include <math.h>
 #include <stdio.h>
+   WbDeviceTag wheel_right = wb_robot_get_device("mot
 
 #define TIME_STEP 64
 
@@ -37,13 +38,16 @@ int main(int argc, char **argv)
 
      if (pressed_key == WB_KEYBOARD_UP)
      {
-       wb_motor_set_velocity (wheel_right, -6.28);
-       wb_motor_set_velocity (wheel_left, -6.28);
+       wb_motor_set_velocity (wheel_right, -52.35);
+       wb_motor_set_velocity (wheel_left, -52.35);
+       printf("UP key pressed\n");
      }
      else if (pressed_key == WB_KEYBOARD_DOWN)
      {
-       wb_motor_set_velocity (wheel_right, 6.28);
-       wb_motor_set_velocity (wheel_left, 6.28);
+       wb_motor_set_velocity (wheel_right, 10.47);
+       wb_motor_set_velocity (wheel_left, 10.47);
+       printf("DOWN key pressed\n");
+       
      }
      else if (pressed_key == WB_KEYBOARD_RIGHT)
      {
